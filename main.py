@@ -39,7 +39,7 @@ def validate_json_data(json_data):
                 validate(instance=entry[0], schema=scheme)
             except jsonschema.exceptions.ValidationError as err:
                 s = err.message
-                logging.error("\t\tFile: " + entry[1] + "\t\tMessage: " + s[s.find(':') + 1:])
+                logging.error("\n\t\tFile: " + entry[1] + "\n\t\tMessage: " + s[s.find(':') + 1:] + "\n---------------------------")
 
 
 json_data_from_files = []
